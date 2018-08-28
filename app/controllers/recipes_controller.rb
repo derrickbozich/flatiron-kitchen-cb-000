@@ -14,6 +14,7 @@ class RecipesController < ApplicationController
 
     @recipe.update(recipe_params)
     @recipe.save
+    redirect_to recipe_path(@recipe)
   end
 
 
