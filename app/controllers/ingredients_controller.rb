@@ -3,9 +3,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
-  def edit
-    @ingredient = Ingredient.find_by_id(params[:id])
-  end
+
 
   def create
 
@@ -16,6 +14,10 @@ class IngredientsController < ApplicationController
 
   def show
     binding.pry
+    @ingredient = Ingredient.find_by_id(params[:id])
+  end
+
+  def edit
     @ingredient = Ingredient.find_by_id(params[:id])
   end
 end
