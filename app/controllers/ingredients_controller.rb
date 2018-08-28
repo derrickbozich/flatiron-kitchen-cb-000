@@ -11,7 +11,7 @@ class IngredientsController < ApplicationController
 
 
     @ingredient = Ingredient.create(:name => params[:name])
-    redirect_to ingredient_path(@ingredient)
+    # redirect_to ingredient_path(@ingredient)
   end
 
   def show
