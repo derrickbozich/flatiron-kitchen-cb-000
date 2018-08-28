@@ -6,4 +6,8 @@ class IngredientsController < ApplicationController
   def edit
     @ingredient = Ingredient.find_by_id(params[:id])
   end
+
+  def create
+    binding.pry
+  end
 end
