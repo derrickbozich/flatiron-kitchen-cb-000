@@ -18,7 +18,7 @@ class IngredientsController < ApplicationController
   end
 
   def show
-    binding.pry
+  
     @ingredient = Ingredient.find_by_id(params[:id])
   end
 
