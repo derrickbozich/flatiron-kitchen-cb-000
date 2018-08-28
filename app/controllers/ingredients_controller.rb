@@ -8,6 +8,7 @@ class IngredientsController < ApplicationController
 
     @ingredient.update(:name => params[:ingredient][:name])
     @ingredient.save
+    redirect_to ingredient_path(@ingredient)
   end
 
 
@@ -18,7 +19,7 @@ class IngredientsController < ApplicationController
   end
 
   def show
-  
+
     @ingredient = Ingredient.find_by_id(params[:id])
   end
 
