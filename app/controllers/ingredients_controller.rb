@@ -3,11 +3,15 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
+  def update
+    @ingredient = Ingredient.find_by_id(params[:id])
+    binding.pry
+    @ingredient.update(:name => params[:name])
+  end
+
 
 
   def create
-
-
     @ingredient = Ingredient.create(:name => params[:name])
     redirect_to ingredient_path(@ingredient)
   end
