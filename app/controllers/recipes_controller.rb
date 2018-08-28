@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by_id(params[:id])
 
     @recipe.update(recipe_params)
+    @recipe.recipe_ingredients.clear
 
     params[:recipe][:ingredients].each do |ingredient_id|
       if ingredient_id.present?
