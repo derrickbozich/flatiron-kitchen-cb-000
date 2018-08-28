@@ -11,5 +11,6 @@ class IngredientsController < ApplicationController
     binding.pry
 
     @ingredient = Ingredient.create(:name => params[:name])
+    redirect_to Ingredient_path(@ingredient)
   end
 end
