@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    
+
     params[:recipe][:ingredients].each do |ingredient_id|
       if ingredient_id.present?
         @recipe.recipe_ingredients.build(:ingredient_id => ingredient_id)
