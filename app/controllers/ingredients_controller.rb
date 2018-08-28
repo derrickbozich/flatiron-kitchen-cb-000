@@ -4,6 +4,7 @@ class IngredientsController < ApplicationController
   end
 
   def update
+
     @ingredient = Ingredient.find_by_id(params[:id])
 
     @ingredient.update(ingredient_params)
@@ -14,6 +15,7 @@ class IngredientsController < ApplicationController
 
 
   def create
+    binding.pry
     @ingredient = Ingredient.create(ingredient_params)
     redirect_to @ingredient
   end
