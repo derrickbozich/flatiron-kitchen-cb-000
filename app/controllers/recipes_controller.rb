@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find_by_id(params[:id])
 
-    @recipe.update(:name => params[:recipe][:name])
+    @recipe.update(recipe_params)
     @recipe.save
   end
 
@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    
+
     @recipe = Recipe.find_by_id(params[:id])
   end
 
