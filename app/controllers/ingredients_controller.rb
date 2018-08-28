@@ -9,5 +9,7 @@ class IngredientsController < ApplicationController
 
   def create
     binding.pry
+
+    @ingredient = Ingredient.create(:name => params[:name])
   end
 end
