@@ -7,6 +7,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find_by_id(params[:id])
     binding.pry
     @ingredient.update(:name => params[:name])
+    @ingredient.save
   end
 
 
